@@ -8,12 +8,13 @@ function elementSelected(event) {
   // 1. Recorrer el array
   products.map(element => {
     if (event.target.value === element.name) {
-      console.log(element.name);
-      console.log(element.img);
-      console.log(element.price);
+      nameProduct = element.name
+      imgProduct = element.img
+      priceProduct = element.price
+      
     }
   })
-
+  createCard(nameProduct, imgProduct, priceProduct)
 }
 
 function loadSelect() {
@@ -25,22 +26,22 @@ function loadSelect() {
   });    
 }
 
-// function createCard(nameProduct, imgProduct, priceProduct) {
-//   const card = document.createElement('div');
-//   const imgCard = document.createElement('img');
-//   const title = document.createElement('h3');
-//   const price = document.createElement("p");
-//   imgCard.setAttribute('src',imgProduct);
-//   imgCard.setAttribute('alt',nameProduct);
-//   title.textContent = nameProduct;
-//   price.textContent = priceProduct;
-//   card.appendChild(imgCard);
-//   card.appendChild(title);
-//   card.appendChild(price);
-//   main.appendChild(card);
-//   card.classList.add("cardPrueba");
+function createCard(nameProduct, imgProduct, priceProduct) {
+  const card = document.createElement('div');
+  const imgCard = document.createElement('img');
+  const title = document.createElement('h3');
+  const price = document.createElement("p");
+  imgCard.setAttribute('src',imgProduct);
+  imgCard.setAttribute('alt',nameProduct);
+  title.textContent = nameProduct;
+  price.textContent = priceProduct;
+  card.appendChild(imgCard);
+  card.appendChild(title);
+  card.appendChild(price);
+  main.appendChild(card);
+  card.classList.add("card");
 //   // card.classList.remove("cardPrueba")
-// }
+}
 
 
 products.map(element => { console.log(element.name) });
