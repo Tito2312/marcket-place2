@@ -145,11 +145,11 @@ select > option {
   font-family: 'Roboto', sans-serif;
 }
 
-#img-card {
+.img-card {
   width: 40%;
   height: 8rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px #000041;
+  box-shadow: 0 0 10px #0000ff;
   background-size: cover;
   background-position: center;  
   margin-top: 1.5rem;
@@ -171,7 +171,7 @@ select > option {
   font-family: 'Roboto', sans-serif;
 }
 
-#btn-add  {
+.btn-add  {
   font-family: Courier New;
   color: #ffffff;
   font-size: 1rem;
